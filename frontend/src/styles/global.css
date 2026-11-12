@@ -1,0 +1,35 @@
+:root {
+  color-scheme: light;
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --brand: #1f6feb;
+  --border: #d8dee6;
+  --muted: #64748b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f8fb; color: #1f2937; }
+.app-shell { display: flex; min-height: 100vh; }
+.app-side { width: 220px; background: #101828; color: #e5e7eb; padding: 16px 12px; }
+.app-title { font-size: 16px; margin: 0 0 16px; }
+.nav-list { display: flex; flex-direction: column; gap: 4px; }
+.nav-item { color: #cbd5e1; text-decoration: none; padding: 6px 8px; border-radius: 6px; font-size: 13px; }
+.nav-item.router-link-active { background: #1f6feb; color: #fff; }
+.app-main { flex: 1; padding: 16px 20px; }
+.app-head { display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
+.page-head { display: flex; justify-content: space-between; align-items: flex-start; margin: 12px 0; }
+.page-desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
+.stat-row { display: flex; gap: 12px; margin-bottom: 12px; }
+.stat-card { flex: 1; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+.stat-label { display: block; color: var(--muted); font-size: 12px; }
+.stat-value { font-size: 20px; }
+.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-bottom: 12px; }
+.filter-item span { display: block; font-size: 12px; color: var(--muted); }
+.data-table { width: 100%; border-collapse: collapse; background: #fff; }
+.data-table th, .data-table td { border: 1px solid var(--border); padding: 8px 10px; font-size: 13px; text-align: left; }
+.empty-state { text-align: center; color: var(--muted); }
+.row-actions { display: flex; gap: 6px; }
+.btn { border: 1px solid var(--border); background: #fff; border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.btn.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
+.btn.ghost { background: transparent; }
+.link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
+.page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
+.error-text { color: #b42318; }

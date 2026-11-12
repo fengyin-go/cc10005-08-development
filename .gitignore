@@ -1,0 +1,87 @@
+# ===== 依赖目录 =====
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+.yarn/cache
+.pnpm-store/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+eggs/
+pip-wheel-metadata/
+
+# ===== 构建产物 =====
+dist/
+build/
+out/
+target/
+**/target/
+.gradle/
+classes/
+*.class
+*.jar
+*.war
+*.local
+
+# ===== 包管理器 / 构建缓存 =====
+.npm/
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+.sass-cache/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.tox/
+.nox/
+
+# ===== 日志 =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== 环境变量与本地配置 =====
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# ===== 测试覆盖率 =====
+coverage/
+.nyc_output/
+htmlcov/
+*.lcov
+
+# ===== IDE / 编辑器 =====
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# ===== 操作系统 =====
+.DS_Store
+.AppleDouble
+Thumbs.db
+desktop.ini
+
+# ===== 运行期本地文件 =====
+*.sqlite3
+*.db
+*.pid
+*.seed
