@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
 from app.routers import ROUTERS
+from app.services.replay_queue import replay_queue
 from app.store import store
 
 app = FastAPI(title="分布式网页采集调度系统", version="1.0.0")
@@ -24,6 +25,12 @@ app.add_middleware(
 
 for module in ROUTERS:
     app.include_router(module.router)
+
+
+@app.on_event("startup")
+def recover_replay_queue() -> None:
+    """服务启动先接续失败重放队列：加载落盘状态并回收上次进程遗留的未确认领取。"""
+    replay_queue.overview()
 
 
 @app.get("/api/health")

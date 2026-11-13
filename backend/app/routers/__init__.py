@@ -13,6 +13,7 @@ from app.routers import spider as router_spider
 from app.routers import schedule as router_schedule
 from app.routers import antibot as router_antibot
 from app.routers import ratelimit as router_ratelimit
+from app.routers import replay as router_replay
 from app.routers import retry as router_retry
 from app.routers import extractor as router_extractor
 from app.routers import pipeline as router_pipeline
@@ -25,4 +26,4 @@ from app.routers import export as router_export
 from app.routers import rpaflow as router_rpaflow
 from app.routers import auth as router_auth
 
-ROUTERS = [router_site, router_template, router_proxy, router_spider, router_schedule, router_antibot, router_ratelimit, router_retry, router_extractor, router_pipeline, router_validator, router_storage, router_monitor, router_cleanse, router_delta, router_export, router_rpaflow, router_auth]
+ROUTERS = [router_site, router_template, router_proxy, router_spider, router_schedule, router_antibot, router_ratelimit, router_replay, router_retry, router_extractor, router_pipeline, router_validator, router_storage, router_monitor, router_cleanse, router_delta, router_export, router_rpaflow, router_auth]

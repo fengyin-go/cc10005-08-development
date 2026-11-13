@@ -11,7 +11,8 @@ const columns = [
   "并发线程数",
   "请求间隔秒",
   "每日上限条数",
-  "超时秒数"
+  "超时秒数",
+  "停止位置"
 ]
 const actions = [
   "提交执行",
@@ -131,6 +132,7 @@ export default function SpiderView() {
         <thead>
           <tr>
             {columns.map((column) => <th key={column}>{column}</th>)}
+            <th>状态</th>
             <th>可执行动作</th>
           </tr>
         </thead>
@@ -138,6 +140,7 @@ export default function SpiderView() {
           {rows.map((row) => (
             <tr key={String(row.id)}>
               {columns.map((column) => <td key={column}>{row[column] ?? '—'}</td>)}
+              <td>{row.status ?? '—'}</td>
               <td className="row-actions">
                 {actions.map((action) => (
                   <button key={action} className="link" type="button" onClick={() => void runAction(action, row)}>
@@ -149,7 +152,7 @@ export default function SpiderView() {
           ))}
           {rows.length === 0 && (
             <tr>
-              <td className="empty-state" colSpan={columns.length + 1}>暂无采集任务数据，可先登记采集作业</td>
+              <td className="empty-state" colSpan={columns.length + 2}>暂无采集任务数据，可先登记采集作业</td>
             </tr>
           )}
         </tbody>

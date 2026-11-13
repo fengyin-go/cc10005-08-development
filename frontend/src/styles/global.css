@@ -33,3 +33,43 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+/* ===== 失败重放队列 ===== */
+.replay-panel { display: flex; flex-direction: column; gap: 12px; }
+.replay-toolbar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; padding: 10px 12px; background: #fff; border: 1px solid var(--border); border-radius: 8px; }
+.replay-toolbar-note { color: var(--muted); font-size: 12px; align-self: center; }
+.replay-list { display: flex; flex-direction: column; gap: 10px; }
+.replay-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.replay-card.is-frozen { border-left: 4px solid #d97706; }
+.replay-card.is-archived { border-left: 4px solid #b42318; opacity: .92; }
+.replay-card-head { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; cursor: pointer; border-bottom: 1px solid var(--border); }
+.replay-card-title { display: flex; align-items: center; gap: 8px; font-size: 13px; flex-wrap: wrap; }
+.replay-caret { color: var(--muted); width: 12px; }
+.replay-job { color: var(--muted); font-size: 12px; }
+.replay-card-meta { display: flex; flex-wrap: wrap; gap: 16px; color: var(--muted); font-size: 12px; }
+.replay-card-body { padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.replay-stages { display: flex; flex-wrap: wrap; gap: 8px; }
+.replay-stage { display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; background: #f8fafc; }
+.replay-stage.stage-已确认成功 { border-color: #16a34a; background: #f0fdf4; }
+.replay-stage.stage-执行中 { border-color: #1f6feb; background: #eff6ff; }
+.replay-stage.stage-未确认失败 { border-color: #d97706; background: #fffbeb; }
+.replay-stage .stage-icon { font-weight: 700; }
+.replay-stage .stage-state { color: var(--muted); }
+.replay-detail { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; font-size: 12px; margin: 0; }
+.replay-detail dt { color: var(--muted); display: inline; }
+.replay-detail dd { margin: 0 0 0 6px; display: inline; }
+.replay-detail > div { display: block; }
+.replay-sub { font-size: 12px; color: var(--muted); }
+.replay-sub p { margin: 4px 0; }
+.replay-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.inline-input { border: 1px solid var(--border); border-radius: 6px; padding: 5px 8px; font-size: 12px; background: #fff; }
+.replay-hint { color: #b45309; font-size: 12px; }
+.notice-text { color: #166534; font-size: 12px; margin: 0; }
+.late-panel { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+.late-panel h3 { margin: 0 0 4px; font-size: 14px; }
+.badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border); color: var(--muted); }
+.badge-待领取 { border-color: #93c5fd; color: #1d4ed8; background: #eff6ff; }
+.badge-已冻结 { border-color: #fcd34d; color: #92400e; background: #fffbeb; }
+.badge-领取中 { border-color: #6ee7b7; color: #047857; background: #ecfdf5; }
+.badge-已完成 { border-color: #86efac; color: #166534; background: #f0fdf4; }
+.badge-已转存 { border-color: #fca5a5; color: #991b1b; background: #fef2f2; }
+.badge-due { border-color: #1f6feb; color: #fff; background: #1f6feb; }
